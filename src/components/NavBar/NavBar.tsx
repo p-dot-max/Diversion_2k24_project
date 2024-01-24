@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Dropdown from "./Dropdown/Dropdown";
 
 const NavBar = () => {
   
@@ -11,7 +10,7 @@ const NavBar = () => {
         </li>
         <li className="relative">
           <Link to={'/prediction'}>
-            <Dropdown>Prediction</Dropdown>
+            Prediction
           </Link>
         </li>
         <li>
