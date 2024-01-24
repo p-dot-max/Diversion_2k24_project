@@ -11,7 +11,7 @@ const NavBar = () => {
         </li>
         <li className="relative">
           <Link to={'/prediction'}>
-            <Dropdown />
+            <Dropdown>Prediction</Dropdown>
           </Link>
         </li>
         <li>

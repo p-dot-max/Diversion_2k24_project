@@ -1,7 +1,7 @@
 import TabButton from "../TabButton/TabButton";
 import { useState } from "react";
 
-export default function Dropdown() {
+export default function Dropdown( {children} : any ) {
     // State to change selected button status and control dropdown visibility
     const [selectedTopic, setSelectedTopic] = useState<string>('');
     const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
@@ -18,7 +18,7 @@ export default function Dropdown() {
     return (
         <>
             <TabButton isSelected={selectedTopic === 'prediction'} onClick={() => handleTabClick('prediction')}>
-                Prediction
+                {children}
             </TabButton>
                 {isDropdownOpen && (
                   <ul className="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg">
