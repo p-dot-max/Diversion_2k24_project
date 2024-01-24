@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
-      <main className="static">
+      <main className="static w-full">
 
         {/* Navbar parent section */}
         <nav className="flex justify-center items-center w-full h-20">
