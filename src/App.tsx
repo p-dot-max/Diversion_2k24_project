@@ -6,9 +6,6 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
-<<<<<<< HEAD
-
-=======
       <main className="static">
 
         {/* Navbar parent section */}
@@ -24,7 +21,6 @@ function App() {
           <Footer />
         </footer>
       </main>
->>>>>>> 234cc01760285bbadb31414bcd92d3d4a4e5a145
     </>
   );
 }
