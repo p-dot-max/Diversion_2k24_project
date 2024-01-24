@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
-      <main className="static w-full">
+      <main className="w-full h-screen">
 
         {/* Navbar parent section */}
         <nav className="flex justify-center items-center w-full h-20">
@@ -17,7 +17,7 @@ function App() {
         <Outlet />
 
         {/* Footer parent section */}
-        <footer className="flex justify-center items-center w-full h-2/5 absolute bottom-0 bg-slate-500">
+        <footer className="flex justify-center items-center w-full h-2/5 bg-slate-300">
           <Footer />
         </footer>
       </main>
