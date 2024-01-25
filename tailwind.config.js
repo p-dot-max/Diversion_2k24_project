@@ -17,6 +17,15 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        'custom-green': '#379634', // Added custom color
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'], // Added custom font
+      },
+      fontSize: {
+        custom: '60px', // Added custom font size
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
