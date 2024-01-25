@@ -24,7 +24,7 @@ function Home() {
   return (
     <div className="bg-white p-6">
       <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
+        
         <div className="text-center px-6 py-12 md:py-24">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
             Revolutionizing Agriculture with Our{' '}
