@@ -1,4 +1,6 @@
 
+import boy from  './boy.png';
+
 // const Home = () => {
 //   // only for inline styles for the gradient text and any other specific styles
 //   const gradientTextStyle = {
@@ -20,33 +22,74 @@
 //   );
 // };
 
-function Home() {
-  return (
-    <div className="bg-white p-6">
-      <div className="max-w-7xl mx-auto">
+// function Home() {
+//   return (
+//     <div className="bg-white p-6">
+//       <div className="max-w-7xl mx-auto">
         
-        <div className="text-center px-6 py-12 md:py-24">
+//         <div className="text-center px-6 py-12 md:py-24">
+//           <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
+//             Revolutionizing Agriculture with Our{' '}
+//             <div className="mt-4">
+//               <span className="text-green-600">All-in-One AgriTech Ecosystem</span>
+//             </div>
+//           </h1>
+//           <p className="mt-20 text-xl text-gray-600">
+//             Seamless Blockchain Supply Chains, Smart E-Commerce, and Cutting-Edge AI for Healthier Crops and Bountiful Yields. Experience the Future of Farming Today.
+//           </p>
+//           <div className="mt-8 flex justify-center">
+//             <button className="text-white bg-green-500 hover:bg-green-600 font-semibold py-3 px-6 rounded-md mr-2">
+//               Get Started
+//             </button>
+//             <button className="text-green-600 bg-transparent hover:bg-green-100 font-semibold py-3 px-6 rounded-md">
+//               See how it works
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+function Home() {
+
+  return (
+
+    <div className="bg-white min-h-screen flex flex-col items-center">
+      <main className="flex flex-1 flex-col-reverse md:flex-row items-center justify-center p-8">
+        {/* Text Section */}
+        <div className="text-center md:text-left">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
             Revolutionizing Agriculture with Our{' '}
             <div className="mt-4">
-              <span className="text-green-600">All-in-One AgriTech Ecosystem</span>
+              <span className=" text-green-700">All-in-One AgriTech Ecosystem</span>
             </div>
           </h1>
-          <p className="mt-20 text-xl text-gray-600">
+          <p className="mt-4 text-[#0A3200] text-lg md:text-xl font-normal">
             Seamless Blockchain Supply Chains, Smart E-Commerce, and Cutting-Edge AI for Healthier Crops and Bountiful Yields. Experience the Future of Farming Today.
           </p>
-          <div className="mt-8 flex justify-center">
-            <button className="text-white bg-green-500 hover:bg-green-600 font-semibold py-3 px-6 rounded-md mr-2">
+          <div className="mt-8 flex flex-col md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4">
+            <button className="text-white bg-green-600 hover:bg-green-700 font-medium py-3 px-6 rounded-md">
               Get Started
             </button>
-            <button className="text-green-600 bg-transparent hover:bg-green-100 font-semibold py-3 px-6 rounded-md">
+            <button className="text-green-600 bg-transparent hover:bg-green-100 font-medium py-3 px-6 rounded-md">
               See how it works
             </button>
           </div>
         </div>
-      </div>
+        
+        {/* Image commmming*/}
+        <div className="md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+          <img src={boy} alt="Hero" className="w-56 md:w-auto" style={{ height: '842.353px' }} />
+          {/* <div className="w-56 md:w-auto h-[842.353px] bg-gray-300"></div> */}
+        </div>
+      </main>
+
     </div>
+
   );
 }
+
 
 export default Home
