@@ -53,7 +53,7 @@ const NavBar = () => {
                       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     >
                       <div className="text-sm font-semibold leading-none">
-                        Tranportation
+                        Transportation
                       </div>
                       <p className="line-clamp-2 text-sm font-normal leading-snug text-muted-foreground">
                       Here We utilizes blockchain for transparent supply chains, ensuring traceability and trust throughout the agricultural ecosystem.
