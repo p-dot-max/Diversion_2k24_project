@@ -58,7 +58,7 @@ function Home() {
 
     <div className="bg-white min-h-screen flex flex-col items-center">
       <main className="flex flex-1 flex-col-reverse md:flex-row items-center justify-center p-8">
-        {/* Text Section */}
+        {/* Text Section used uuupp*/}
         <div className="text-center md:text-left">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
             Revolutionizing Agriculture with Our{' '}
