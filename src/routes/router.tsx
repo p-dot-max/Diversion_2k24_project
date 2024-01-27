@@ -14,7 +14,6 @@ export const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-
       //Home Page
       {
         path: "/",

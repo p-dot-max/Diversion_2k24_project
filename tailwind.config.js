@@ -31,6 +31,7 @@ module.exports = {
 
       colors: {
         'custom-green': '#379634', // Added custom color
+        'custom-text-green': '#507D2A',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'], // Added custom font

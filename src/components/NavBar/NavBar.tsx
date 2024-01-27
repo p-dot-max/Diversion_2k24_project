@@ -22,7 +22,7 @@ const NavBar = () => {
           </NavigationMenuItem>
           {/* Nav item 2 */}
           <NavigationMenuItem>
-            <Link to={"/"} className={navigationMenuTriggerStyle()}>
+            <Link to={"/about"} className={navigationMenuTriggerStyle()}>
               About Us
             </Link>
           </NavigationMenuItem>
