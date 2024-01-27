@@ -9,9 +9,21 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
+import {
+  DropdownMenuTrigger,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuItem,
+  DropdownMenuContent,
+  DropdownMenu
+} from "@/components/ui/dropdown-menu";
+
+import { Button } from "@/components/ui/button"
+
 const NavBar = () => {
   return (
-    <nav className="flex justify-center items-start w-3/5 font-semibold">
+    <nav className="flex justify-between items-start w-3/5 font-semibold">
+      <div className="font-black text-black">LOGO</div>
       <NavigationMenu>
         <NavigationMenuList>
           {/* Nav Item 1 */}
@@ -78,6 +90,40 @@ const NavBar = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <header className="flex h-14 items-center border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+        <div className="ml-auto flex items-center gap-4">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                className="rounded-full border border-gray-200 w-8 h-8 dark:border-gray-800"
+                size="icon"
+                variant="ghost"
+              >
+                <img
+                  alt="Avatar"
+                  className="rounded-full"
+                  height="32"
+                  src="/placeholder.svg"
+                  style={{
+                    aspectRatio: "32/32",
+                    objectFit: "cover",
+                  }}
+                  width="32"
+                />
+                <span className="sr-only">Toggle user menu</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuItem>Support</DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Logout</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </header>
     </nav>
   );
 };
