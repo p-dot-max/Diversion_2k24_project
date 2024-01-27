@@ -17,6 +17,18 @@ module.exports = {
       },
     },
     extend: {
+      borderRadius: {
+        'custom': '7px',
+      },
+
+      backgroundColor: {
+        'custom': 'rgba(138, 162, 169, 0.23)',
+      },
+
+      boxShadow: {
+        'custom': '6px 6px 14.5px 0px rgba(0, 0, 0, 0.35)',
+      },
+
       colors: {
         'custom-green': '#379634', // Added custom color
       },

@@ -20,6 +20,9 @@ function App() {
         {/* <footer className="flex justify-center items-center w-full h-2/5 bg-slate-300">
           <Footer />
         </footer> */}
+      
+      
+      
       </main>
     </>
   );

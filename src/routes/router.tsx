@@ -6,6 +6,7 @@ import Contact from "@/components/NavBar/Services/Contact";
 import Transportation from "@/components/NavBar/Services/Transportation";
 import ComunityForum from "@/components/NavBar/ComunityForum/ComunityForum";
 import Home from "@/components/Home/Home";
+import About from "@/components/About/About";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      // About
+      {
+        path: "/about",
+        element: <About />,
       },
       //services routing
       {
