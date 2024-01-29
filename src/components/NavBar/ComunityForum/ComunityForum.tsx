@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 
 const ComunityForum = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen dark:bg-gray-900">
        <div className="flex">
         {/* need to make this aside responsive */}
         <aside className="w-80 bg-gray-200 p-6">
@@ -62,7 +62,7 @@ const ComunityForum = () => {
         </aside>
         <main className="px-6 py-4 flex-grow">
           <header className=" px-6 py-8">
-            <h1 className="text-4xl font-bold text-black">Community</h1>
+            <h1 className="text-4xl font-bold text-black dark:text-white">Community</h1>
           </header>
           <div className="flex items-center space-x-4 mb-6">
             <Input className="flex-1" placeholder="Search or create a post..." />
@@ -73,7 +73,7 @@ const ComunityForum = () => {
               <div>
               <Select>
                 <SelectTrigger id="sort-view">
-                  <SelectValue placeholder="sort & view" />
+                  <SelectValue placeholder="sort & view" className="dark:text-white" />
                 </SelectTrigger>
                 <SelectContent position="popper">
                   <SelectItem value="latest">Latest</SelectItem>

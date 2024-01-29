@@ -12,7 +12,7 @@ const ProductTracking = () => {
       </div>
       <main className="container mx-auto px-4 py-8 space-y-8">
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Track Your Product</h2>
+          <h2 className="text-2xl font-semibold dark:text-white">Track Your Product</h2>
           <p className="text-gray-600 dark:text-gray-400">
             Get real-time updates on your product's location and status as it
             moves from the farm to the market.
@@ -23,7 +23,7 @@ const ProductTracking = () => {
           </form>
         </section>
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Supply Chain Transparency</h2>
+          <h2 className="text-2xl font-semibold dark:text-white">Supply Chain Transparency</h2>
           <p className="text-gray-600 dark:text-gray-400">
             View transparent information about each stage of the supply chain,
             from cultivation to distribution.
@@ -76,12 +76,12 @@ const ProductTracking = () => {
           </div>
         </section>
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Blockchain Verification</h2>
+          <h2 className="text-2xl font-semibold dark:text-white">Blockchain Verification</h2>
           <p className="text-gray-600 dark:text-gray-400">
             Verify the authenticity of your product and ensure data integrity
             using our blockchain technology.
           </p>
-          <Button className="w-full md:w-auto" variant="outline">
+          <Button className="w-full md:w-auto dark:text-white" variant="outline">
             Verify Product
           </Button>
         </section>

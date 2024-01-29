@@ -1,17 +1,17 @@
 
 function Home() {
   return (
-    <div className="bg-white p-6">
+    <div className="bg-white p-6 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
 
         <div className="text-center px-6 py-12 md:py-24">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white">
             Revolutionizing Agriculture with Our{' '}
             <div className="mt-4">
               <span className="text-green-600">All-in-One AgriTech Ecosystem</span>
             </div>
           </h1>
-          <p className="mt-20 text-xl text-gray-600">
+          <p className="mt-20 text-xl text-gray-600 dark:text-white">
             Seamless Blockchain Supply Chains, Smart E-Commerce, and Cutting-Edge AI for Healthier Crops and Bountiful Yields. Experience the Future of Farming Today.
           </p>
           <div className="mt-8 flex justify-center">

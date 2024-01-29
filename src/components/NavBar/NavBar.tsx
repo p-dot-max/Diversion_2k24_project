@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -18,36 +19,38 @@ import {
   DropdownMenu
 } from "@/components/ui/dropdown-menu";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
+
+import { ModeToggle } from "../mode-toggle";
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-between items-start w-3/5 font-semibold">
-      <div className="font-black text-black">LOGO</div>
+    <nav className="flex justify-between items-start w-3/5 font-semibold dark:bg-gray-900">
+      <div className="font-black text-black dark:bg-gray-900 dark:text-white">LOGO</div>
       <NavigationMenu>
         <NavigationMenuList>
           {/* Nav Item 1 */}
           <NavigationMenuItem>
-            <Link to={"/"} className={navigationMenuTriggerStyle()}>
+            <Link to={"/"} className={cn("dark:text-white",navigationMenuTriggerStyle())}>
               Home
             </Link>
           </NavigationMenuItem>
           {/* Nav item 2 */}
           <NavigationMenuItem>
-            <Link to={"/about"} className={navigationMenuTriggerStyle()}>
+            <Link to={"/about"} className={cn("dark:text-white",navigationMenuTriggerStyle())}>
               About Us
             </Link>
           </NavigationMenuItem>
           {/* Nav item 3 */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="dark:text-white">Services</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-4 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild className="hover:bg-slate-200">
                     <Link
                       to={"/prediction"}
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground dark:hover:bg-gray-900 focus:bg-accent focus:text-accent-foreground"
                     >
                       <div className="text-sm font-semibold leading-none">
                         Prediction
@@ -62,7 +65,7 @@ const NavBar = () => {
                   <NavigationMenuLink asChild className="hover:bg-slate-200">
                     <Link
                       to={"/transportaion"}
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground dark:hover:bg-gray-900 focus:bg-accent focus:text-accent-foreground"
                     >
                       <div className="text-sm font-semibold leading-none">
                         Transportation
@@ -78,19 +81,20 @@ const NavBar = () => {
           </NavigationMenuItem>
           {/* Nav item 4 */}
           <NavigationMenuItem>
-            <Link to={"/community"} className={navigationMenuTriggerStyle()}>
+            <Link to={"/community"} className={cn("dark:text-white",navigationMenuTriggerStyle())}>
               Community
             </Link>
           </NavigationMenuItem>
           {/* Nav item 5 */}
           <NavigationMenuItem>
-            <Link to={"/contacts"} className={navigationMenuTriggerStyle()}>
+            <Link to={"/contacts"} className={cn("dark:text-white dark:bg-gray-900",navigationMenuTriggerStyle())}>
               Contact
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <header className="flex h-14 items-center border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+      <header className="flex h-14 items-center border-b gap-x-3 bg-gray-100/40 px-6 dark:bg-gray-800/40">
+        <ModeToggle />
         <div className="ml-auto flex items-center gap-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
