@@ -11,7 +11,7 @@ const About = () => {
         <Compom />
       </div>
       <div className="flex justify-center items-center my-10">
-        <div className="w-full max-w-4xl">
+        <div className="w-full max-w-3xl">
           <FaqSection />
         </div>
       </div>
