@@ -5,8 +5,10 @@ const Compom = () => {
   return (
     <>
       <div className="flex">
-        <div className="">
-            <img src={img} />
+        <div className="rounded-md">
+            <img 
+              src={img}
+            />
         </div>
 
         <div>
