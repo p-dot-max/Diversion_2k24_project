@@ -1,7 +1,6 @@
 import NavBar from "./components";
 import { Outlet } from "react-router-dom";
-// import Footer from "./components/Footer/Footer";
-
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -17,9 +16,9 @@ function App() {
         <Outlet />
 
         {/* Footer parent section */}
-        {/* <footer className="flex justify-center items-center w-full h-2/5 bg-slate-300">
+        <footer className="flex justify-center items-center w-full h-2/5 bg-slate-300">
           <Footer />
-        </footer>   */}    
+        </footer>
 
       </main>
     </>
