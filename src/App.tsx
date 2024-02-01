@@ -1,6 +1,6 @@
 import NavBar from "./components";
 import { Outlet } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <main className="w-full min-h-screen dark:bg-gray-900">
 
         {/* Navbar parent section */}
-        <nav className="flex justify-center items-center w-full h-20">
+        <nav className="flex justify-center items-center w-full h-20 z-20">
           <NavBar />
         </nav>
 

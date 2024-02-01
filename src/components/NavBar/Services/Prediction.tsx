@@ -11,10 +11,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+
 const SelectCrop = () => {
   return (
     <Select>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className="w-[180px] dark:text-white">
         <SelectValue placeholder="Select a crop" />
       </SelectTrigger>
       <SelectContent>
@@ -26,7 +30,7 @@ const SelectCrop = () => {
         </SelectGroup>
       </SelectContent>
     </Select>
-  )
+  );
 };
 
 const Prediction = () => {
@@ -34,56 +38,118 @@ const Prediction = () => {
   const [previewImage, setPreviewImage] = useState<string>("");
 
   return (
-    <div className="flex flex-col justify-center items-center w-full h-full gap-10 relative">
+    <main className="flex flex-col items-center justify-center min-h-screen py-2">
+      <div className="w-[498px] h-[498px] bg-green-300 rounded-full absolute ml-[702px] mb-[619px]" />
+      <div className="w-[498px] h-[498px] bg-slate-400 rounded-full absolute mr-[757px] mt-[10px]" />
+      <section className="flex flex-wrap justify-center w-full max-w-4xl p-4 my-4 md:mt-32 bg-white bg-opacity-25 shadow-md rounded-md border-2 border-white backdrop-blur-[101.20px] ">
+        <div className="w-full md:w-1/2 p-2 md:h-full">
+          <h2 className="text-2xl font-bold text-center mb-4">
+            Crop Disease Detection
+          </h2>
+          <div className="grid w-full max-w-sm items-center gap-1.5 mx-auto">
+            <SelectCrop />
 
-      <div className="w-[733px]">
-      <SelectCrop />
-      </div>
-      <Dropzone
-        onDrop={(acceptedFiles) => {
-          setFile(acceptedFiles[0]);
-          setPreviewImage(URL.createObjectURL(acceptedFiles[0]));
-          console.log(acceptedFiles);
-        }}
-      >
-        {({ getRootProps, getInputProps, isDragActive }) => (
-          <section className="w-2/5 h-2/5 z-10 bg-transparent">
-            <div
-              {...getRootProps()}
-              className="flex justify-center items-center w-[733px] h-[398px] bg-white bg-opacity-25 rounded-[19px] border-2 border-white backdrop-blur-[101.20px]"
-            >
-              <input {...getInputProps()} />
-              {isDragActive ? (
-                <p className="bg-transparent">Drop it here</p>
-              ) : (
-                <ol className="flex flex-col items-center bg-transparent">
-                <li className="bg-transparent w-[496px] text-center text-zinc-900 text-opacity-40 text-4xl font-black font-['Inter']">Drag & drop or click here.</li>
-                <li className="bg-transparent w-[496px] text-center text-zinc-900 text-opacity-40 text-base font-normal font-['Inter']">to upload your image ( max 2 MiB )</li>
-                </ol>
-              )}
+            <Label htmlFor="crop-image">Upload Crop Image</Label>
+            <div className="flex flex-col justify-center items-center md:h-[300px] border-2 border-dashed border-gray-300 rounded-md p-4 text-center">
+              <Dropzone
+                onDrop={(acceptedFiles) => {
+                  setFile(acceptedFiles[0]);
+                  setPreviewImage(URL.createObjectURL(acceptedFiles[0]));
+                  console.log(acceptedFiles);
+                }}
+              >
+                {({ getRootProps, getInputProps, isDragActive }) => (
+                  <section className="bg-transparent">
+                    <div {...getRootProps()}>
+                      <input {...getInputProps()} />
+                      {isDragActive ? (
+                        <p className="bg-transparent">Drop it here</p>
+                      ) : (
+                        <ol className="flex flex-col items-center bg-transparent">
+                          <li className="bg-transparent text-center text-zinc-900 text-opacity-40 font-black font-['Inter']">
+                            Drag & drop or click here.
+                          </li>
+                          <li className="bg-transparent text-center text-zinc-900 text-opacity-40 font-normal font-['Inter']">
+                            to upload your image ( max 2 MiB )
+                          </li>
+                        </ol>
+                      )}
+                    </div>
+                  </section>
+                )}
+              </Dropzone>
             </div>
-          </section>
-        )}
-      </Dropzone>
-      <div className="w-[498px] h-[498px] bg-green-300 rounded-full absolute ml-[702px] mb-[219px]" />
-      <div className="w-[498px] h-[498px] bg-slate-400 rounded-full absolute mr-[757px] mt-[300px]" />
-
-      {previewImage && (
-        <div className="w-2/5 relative">
-          <img
-            className="w-full h-full"
-            src={previewImage}
-            alt="Preview Image"
-          />
-          <button
-            className="bg-blue-800 text-white font-semibold absolute top-0 right-0 p-2 rounded-sm"
-            onClick={() => setPreviewImage("")}
-          >
-            Remove
-          </button>
+          </div>
+          <div className="flex justify-center mt-4">
+            <Button className="px-4 py-2 bg-blue-600 text-white rounded-md">
+              Detect Disease
+            </Button>
+          </div>
         </div>
-      )}
-    </div>
+        <div className="w-full md:w-1/2 p-2">
+          {previewImage ? (
+            <div className="flex flex-col items-center relative">
+              <h2 className="text-2xl font-bold text-center mb-4 dark:text-zinc-900">
+            Detected Disease
+          </h2>
+              <img
+                alt="Detected Disease"
+                className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
+                src={previewImage}
+                height="200"
+                width="200"
+              />
+              <button
+                className="bg-blue-800 text-white font-semibold absolute top-0 right-0 p-2 rounded-sm"
+                onClick={() => setPreviewImage("")}
+              >
+                Remove
+              </button>
+              <p className="mt-4 text-gray-500 dark:text-zinc-900">
+                Disease Name: <span className="font-bold">Fusarium Wilt</span>
+              </p>
+            </div>
+          ) : (
+            <div className="flex flex-col items-center">
+              <h2 className="text-2xl font-bold text-center mb-4 dark:text-zinc-900">
+            Image not found
+          </h2>
+              {/* ADD A NO IMAGE UPLOADED SVG */}
+              <div className="w-80 h-96" />
+              <p className="mt-4 text-gray-500 dark:text-zinc-900">
+                Disease Name: <span className="font-bold">Please upload an image first</span>
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+      <section className="w-full max-w-2xl p-4 my-4 bg-white bg-opacity-25 shadow-md rounded-md border-2 border-white backdrop-blur-[101.20px] z-10">
+        <h2 className="text-2xl font-bold text-center mb-4">
+          Recommended Solution
+        </h2>
+        <p className="text-gray-500 dark:text-zinc-900 font-semibold">
+          Fusarium wilt can be managed by using resistant varieties, crop
+          rotation, and soil solarization. Avoid planting susceptible crops in
+          infested fields.
+        </p>
+      </section>
+      <section className="w-full max-w-2xl p-4 my-4 bg-white bg-opacity-25 shadow-md rounded-md border-2 border-white backdrop-blur-[101.20px] z-10">
+        <h2 className="text-2xl font-bold text-center mb-4">Feedback</h2>
+        <div className="grid w-full max-w-sm items-center gap-1.5 mx-auto">
+          <Label htmlFor="feedback">Your Feedback</Label>
+          <Textarea
+            id="feedback"
+            placeholder="Type your feedback here."
+            className="dark:text-white"
+          />
+        </div>
+        <div className="flex justify-center mt-4">
+          <Button className="px-4 py-2 bg-blue-600 text-white rounded-md">
+            Submit Feedback
+          </Button>
+        </div>
+      </section>
+    </main>
   );
 };
 
