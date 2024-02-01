@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Dropzone from "react-dropzone";
+import axios from "axios";
 
 import {
   Select,
@@ -16,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 
 const SelectCrop = () => {
+
   return (
     <Select>
       <SelectTrigger className="w-[180px] dark:text-white">
@@ -36,6 +38,7 @@ const SelectCrop = () => {
 const Prediction = () => {
   const [file, setFile] = useState<File>();
   const [previewImage, setPreviewImage] = useState<string>("");
+  const [diseaseName, setDiseaseName] = useState("");
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -81,7 +84,36 @@ const Prediction = () => {
             </div>
           </div>
           <div className="flex justify-center mt-4">
-            <Button className="px-4 py-2 bg-blue-600 text-white rounded-md">
+            <Button
+              className="px-4 py-2 bg-blue-600 text-white rounded-md"
+              onClick={async () => {
+                if (!file) {
+                  alert("Please upload an image first.");
+                  return;
+                }
+
+                const formData = new FormData();
+                formData.append("file", file);
+
+                try {
+                  const response = await axios.post(
+                    "http://localhost:4444/predict",
+                    formData,
+                    {
+                      headers: {
+                        "Content-Type": "multipart/form-data",
+                      },
+                    }
+                  );
+
+                  // Update kar disease name based on the response :)
+                  setDiseaseName(response.data.class);
+                } catch (error) {
+                  console.error("Error uploading file:", error);
+                  alert("Error processing file");
+                }
+              }}
+            >
               Detect Disease
             </Button>
           </div>
@@ -90,8 +122,8 @@ const Prediction = () => {
           {previewImage ? (
             <div className="flex flex-col items-center relative">
               <h2 className="text-2xl font-bold text-center mb-4 dark:text-zinc-900">
-            Detected Disease
-          </h2>
+                Detected Disease
+              </h2>
               <img
                 alt="Detected Disease"
                 className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
@@ -106,18 +138,19 @@ const Prediction = () => {
                 Remove
               </button>
               <p className="mt-4 text-gray-500 dark:text-zinc-900">
-                Disease Name: <span className="font-bold">Fusarium Wilt</span>
+                Disease Name: <span className="font-bold">{diseaseName || 'Please upload an image first'}</span>
               </p>
             </div>
           ) : (
             <div className="flex flex-col items-center">
               <h2 className="text-2xl font-bold text-center mb-4 dark:text-zinc-900">
-            Image not found
-          </h2>
+                Image not found
+              </h2>
               {/* ADD A NO IMAGE UPLOADED SVG */}
               <div className="w-80 h-96" />
               <p className="mt-4 text-gray-500 dark:text-zinc-900">
-                Disease Name: <span className="font-bold">Please upload an image first</span>
+                Disease Name:{" "}
+                <span className="font-bold">Please upload an image first</span>
               </p>
             </div>
           )}
