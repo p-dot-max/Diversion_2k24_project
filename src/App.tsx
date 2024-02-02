@@ -15,8 +15,9 @@ function App() {
         {/* Outlet renders children paths i.e, in our case the paths in navbar */}
         <Outlet />
 
+        <hr className="border-gray-500"></hr>
         {/* Footer parent section */}
-        <footer>
+        <footer className="container">
           <Footer />
         </footer>
 
