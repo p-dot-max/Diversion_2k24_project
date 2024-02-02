@@ -16,7 +16,7 @@ function App() {
         <Outlet />
 
         {/* Footer parent section */}
-        <footer className="flex justify-center items-center w-full h-2/5 bg-slate-300">
+        <footer>
           <Footer />
         </footer>
 

@@ -35,12 +35,14 @@ const NavBar = () => {
               Home
             </Link>
           </NavigationMenuItem>
+          
           {/* Nav item 2 */}
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <Link to={"/about"} className={cn("dark:text-white",navigationMenuTriggerStyle())}>
               About Us
             </Link>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
+
           {/* Nav item 3 */}
           <NavigationMenuItem>
             <NavigationMenuTrigger className="dark:text-white">Services</NavigationMenuTrigger>
