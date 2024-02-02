@@ -37,11 +37,11 @@ const NavBar = () => {
           </NavigationMenuItem>
           
           {/* Nav item 2 */}
-          {/* <NavigationMenuItem>
+          <NavigationMenuItem>
             <Link to={"/about"} className={cn("dark:text-white",navigationMenuTriggerStyle())}>
-              About Us
+              Docs
             </Link>
-          </NavigationMenuItem> */}
+          </NavigationMenuItem>
 
           {/* Nav item 3 */}
           <NavigationMenuItem>

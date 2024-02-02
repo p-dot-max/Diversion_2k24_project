@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -17,6 +18,11 @@ module.exports = {
       },
     },
     extend: {
+
+      height: {
+        '374': '374px'
+      },
+
       borderRadius: {
         'custom': '7px',
       },
@@ -32,6 +38,7 @@ module.exports = {
       colors: {
         'custom-green': '#379634', // Added custom color
         'custom-text-green': '#507D2A',
+        'custom-text-color': 'rgba(55, 150, 52, 0.19)'
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'], // Added custom font

@@ -4,26 +4,28 @@ const FaqItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-200 py-3">
-      <dt className="flex justify-between items-center">
+    <div className={`border-b border-gray-200 py-4 transition duration-500 ease-in-out ${isOpen ? "bg-gray-50" : "bg-white"}`}>
+      <dt>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-left w-full text-gray-700 text-sm font-medium bg-transparent outline-none focus:outline-none"
+          className="flex justify-between items-center w-full text-left text-gray-700 text-sm font-medium bg-transparent outline-none focus:outline-none"
+          aria-expanded={isOpen}
         >
-          <div className="flex justify-between items-center font-semibold">
-            <span>{question}</span>
-            <span className="text-xl">{isOpen ? "-" : "+"}</span>
-          </div>
+          <span className="font-semibold">{question}</span>
+          <span className="text-xl transform transition-transform duration-300 ease-in-out">
+            {isOpen ? "−" : "+"}
+          </span>
         </button>
       </dt>
-      <dd
-        className={`${isOpen ? "block" : "hidden"} mt-2 text-gray-500 text-sm`}
-      >
-        {answer}
+      <dd className={`${isOpen ? "max-h-40" : "max-h-0"} overflow-hidden transition-max-height duration-500 ease-in-out text-gray-500 text-sm`}>
+        <p className="pt-2">
+          {answer}
+        </p>
       </dd>
     </div>
   );
 };
+
 
 const FaqSection = () => {
   const faqs = [
@@ -59,10 +61,10 @@ const FaqSection = () => {
 
   return (
     <div className="bg-white p-6 md:p-8 lg:p-12">
-      <h2 className="text-2xl font-bold text-custom-green mb-4">
+      <h2 className="text-2xl font-bold text-custom-green mb-6">
         Frequently Asked Questions
       </h2>
-      <dl className="space-y-6">
+      <dl className="space-y-4 md:space-y-6">
         {faqs.map((faq, index) => (
           <FaqItem key={index} question={faq.question} answer={faq.answer} />
         ))}
