@@ -4,7 +4,7 @@ const FaqItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`border-b border-gray-200 py-4 px-10 transition duration-500 ease-in-out ${isOpen ? "bg-gray-50 shadow-md": "bg-white"}`}>
+    <div className={`border-b border-gray-200 py-4  px-10 transition duration-500 ease-in-out ${isOpen ? "bg-gray-50 shadow-md": "bg-white"}`}>
       <dt>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -60,7 +60,7 @@ const FaqSection = () => {
   ];
 
   return (
-    <div className="bg-white p-6 md:p-8 lg:p-12">
+    <div className="bg-white p-6 md:p-8 lg:p-12 dark:bg-gray-900">
       <h2 className="text-2xl font-bold text-custom-green mb-6">
         Frequently Asked Questions
       </h2>

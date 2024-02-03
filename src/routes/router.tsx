@@ -59,7 +59,7 @@ export const router = createBrowserRouter([
       // community
       {
         path: "community",
-        element: <ComunityForum />,
+        element: <ComunityForum2 />,
       },
     ],
   },

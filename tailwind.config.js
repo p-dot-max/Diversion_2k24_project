@@ -10,9 +10,10 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    borderRadius: {
-      'custom-sm': '50px',
-    },
+
+    // borderRadius: {
+    //   'custom-sm': '50px',
+    // },
 
     container: {
       center: true,
