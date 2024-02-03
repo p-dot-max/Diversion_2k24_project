@@ -1,6 +1,4 @@
-import Cards from "../About/Cards";
 import About from "../About/About";
-import { Card } from "../ui/card";
 
 function Home() {
   return (

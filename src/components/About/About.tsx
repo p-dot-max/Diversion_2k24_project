@@ -1,5 +1,6 @@
 import FaqSection from "../Faq/Faq2";
 import Cards from "./Cards";
+import Component from "./Services";
 
 const About = () => {
   return (
@@ -15,6 +16,9 @@ const About = () => {
         </p>
       </div>
       <Cards />
+      <div className="flex justify-center items-center px-10 py-10 mx-10 my-10">
+        Service Section Here
+      </div>
       <FaqSection />
     </>
   );

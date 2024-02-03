@@ -1,8 +1,10 @@
-import React from 'react'
+import Component from '../About/Services'
 
 const Docs = () => {
   return (
-    <div>Docs</div>
+    <>
+      <Component />
+    </>
   )
 }
 

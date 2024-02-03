@@ -10,7 +10,7 @@ import Home from "@/components/Home/Home";
 import ProductTracking from "@/components/SupplyChain/ProductTracking";
 import UserInterface from "@/components/NavBar/ComunityForum/UserInterface";
 import Dashboard from "@/components/NavBar/ComunityForum/Dashboard";
-// import ComunityForum2 from "@/components/NavBar/ComunityForum/ComunityForum2";
+import ComunityForum2 from "@/components/NavBar/ComunityForum/ComunityForum2";
 import Docs from "@/components/Docs/Docs";
 import Transparency from "@/components/SupplyChain/Transparency";
 import Authentication from "@/components/SupplyChain/Authentication";
@@ -70,7 +70,7 @@ export const router = createBrowserRouter([
       // community
       {
         path: "community",
-        element: <ComunityForum2 />,
+        element: <ComunityForum />,
       },
     ],
   },
