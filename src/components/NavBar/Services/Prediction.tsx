@@ -39,6 +39,7 @@ const Prediction = () => {
   const [file, setFile] = useState<File>();
   const [previewImage, setPreviewImage] = useState<string>("");
   const [diseaseName, setDiseaseName] = useState("");
+  const [detecting, setDetecting ] = useState(false);
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -92,12 +93,14 @@ const Prediction = () => {
                   return;
                 }
 
+                setDetecting(true);
+
                 const formData = new FormData();
                 formData.append("file", file);
 
                 try {
                   const response = await axios.post(
-                    "http://localhost:4444/predict",
+                    "http://localhost:6444/predict",
                     formData,
                     {
                       headers: {
@@ -106,8 +109,30 @@ const Prediction = () => {
                     }
                   );
 
-                  // Update kar disease name based on the response :)
-                  setDiseaseName(response.data.class);
+                  // Update kar disease name based on the response;
+                  if(response.data.class === 'leaf') {
+                    try {
+                      const response = await axios.post(
+                        "http://localhost:4444/predict",
+                        formData,
+                        {
+                          headers: {
+                            "Content-Type": "multipart/form-data",
+                          },
+                        }
+                      );
+                      setDetecting(false);
+    
+                      // Update kar disease name based on the response :)
+                      setDiseaseName(response.data.class);
+                    } catch (error) {
+                      console.error("Error uploading file:", error);
+                      alert("Error processing file");
+                    }
+                  } else {
+                    setDetecting(false)
+                    setDiseaseName('Not a leaf');
+                  }
                 } catch (error) {
                   console.error("Error uploading file:", error);
                   alert("Error processing file");
@@ -138,7 +163,13 @@ const Prediction = () => {
                 Remove
               </button>
               <p className="mt-4 text-gray-500 dark:text-zinc-900">
-                Disease Name: <span className="font-bold">{diseaseName || 'Please upload an image first'}</span>
+                Disease Name: {
+                  detecting ? (<span>Detecting...</span>)
+                  : (
+                    <span className="font-bold">{
+                      diseaseName || 'Please upload an image first'}</span>
+                  )
+                }
               </p>
             </div>
           ) : (
