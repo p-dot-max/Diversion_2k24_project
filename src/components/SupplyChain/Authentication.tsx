@@ -92,7 +92,7 @@ const Authentication = () => {
         <div className="w-full md:w-2/3 lg:w-1/3 h-2/3 bg-white bg-opacity-50 border-2 border-white rounded-xl">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col justify-center p-5 gap-3"
+            className="flex flex-col justify-center p-5 w-full h-full gap-3"
           >
             <h1 className="font-semibold text-3xl text-black">Get Started</h1>
             <p className=" text-black text-sm text-wrap font-light pr-20 pb-5">
@@ -123,7 +123,7 @@ const Authentication = () => {
               className="bg-white text-black p-1 pl-5 w-full h-12 border-1 rounded-sm"
             />
             <button
-              className="text-normal bg-green-500 text-white font-semibold p-1 w-full h-12 border-2 rounded-sm mt-5"
+              className="text-normal bg-green-500 text-white font-semibold p-1 w-full h-12 border-2 rounded-sm"
               type="submit"
             >
               Register Yourself
