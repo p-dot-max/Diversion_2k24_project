@@ -1,47 +1,37 @@
-// import boy from './boy.png';
+import About from "../About/About";
+import img3 from "./img3.jpg"; 
 
-// function Home2() {
-//   return (
-//     <div className="bg-white min-h-screen flex flex-col items-center">
-//       <main className="flex flex-1 flex-col-reverse md:flex-row items-center justify-center p-8">
-//         {/* Text Section used uuupp*/}
-//         <div className="text-center md:text-left">
-//           <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
-//             Revolutionizing Agriculture with Our{" "}
-//             <div className="mt-4">
-//               <span className="text-green-700">
-//                 All-in-One AgriTech Ecosystem
-//               </span>
-//             </div>
-//           </h1>
-//           <p className="mt-4 text-[#0A3200] text-lg md:text-xl font-normal">
-//             Seamless Blockchain Supply Chains, Smart E-Commerce, and
-//             Cutting-Edge AI for Healthier Crops and Bountiful Yields. Experience
-//             the Future of Farming Today.
-//           </p>
-//           <div className="mt-8 flex flex-col md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4">
-//             <button className="text-white bg-green-600 hover:bg-green-700 font-medium py-3 px-6 rounded-[50px]">
-//               Get Started
-//             </button>
-//             <button className="text-green-600 bg-transparent hover:bg-green-100 drop-shadow-md font-medium py-3 px-6 rounded-md">
-//               See how it works
-//             </button>
-//           </div>
-//         </div>
+function Home() {
+  return (
+    <div className="bg-white dark:bg-gray-800 mt-9">
+      <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-7 lg:col-span-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
+              Empowering <span className="text-green-600"> Agriculture </span> with Tech Innovations
+            </h1>
+            <p className="mt-6 text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300">
+              Join the green revolution with our eco-friendly technologies. Enhance your farm's productivity with our smart solutions for a sustainable future.
+            </p>
+            <div className="mt-8 flex gap-4 flex-wrap">
+              <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition-all transform hover:scale-105 duration-300 ease-in-out">
+                Explore Technologies
+              </button>
+              <button className="bg-transparent hover:bg-green-50 text-green-600 font-semibold py-2 px-4 rounded-lg border border-green-600 transition duration-300 ease-in-out">
+                Learn About Our Impact
+              </button>
+            </div>
+          </div>
+          <div className="md:col-span-5 lg:col-span-6 flex justify-center">
+            <div className="w-full h-3/4 sm:max-w-md lg:max-w-lg xl:max-w-xl">
+              <img src={img3} alt="Farming" className="w-[500px] h-auto shadow-xl rounded-lg transform transition duration-500 hover:scale-105"/>
+            </div>
+          </div>
+        </div>
+        <About />
+      </div>
+    </div>
+  );
+}
 
-//         {/* Image commmming*/}
-//         <div className="md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
-//           <img
-//             src={boy}
-//             alt="Hero"
-//             className="w-56 md:w-auto"
-//             style={{ height: "842.353px" }}
-//           />
-//           {/* <div className="w-56 md:w-auto h-[842.353px] bg-gray-300"></div> */}
-//         </div>
-//       </main>
-//     </div>
-//   );
-// }
-
-// export default Home2;
+export default Home;

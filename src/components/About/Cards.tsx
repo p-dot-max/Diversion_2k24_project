@@ -8,7 +8,7 @@ const Cards = () => {
         alt="Farmers working in the field"
         className="rounded-[50px] h-374 w-374 bg-green-50 bg-gradient-to-r from-cyan-500 to-blue-500"
       />
-      <div className="flex flex-col justify-between md:ml-8 mt-6 md:mt-0 bg-custom-text-color p-9 md:w-3/5 h-374 w-374 rounded-[50px] border-2 border-custom-green" style={{ height: '100%' }}>
+      <div className="flex flex-col shadow-xl justify-between md:ml-8 mt-6 md:mt-0 bg-custom-text-color p-9 md:w-3/5 h-374 w-374 rounded-[50px] border-2 border-custom-green" style={{ height: '100%' }}>
         <div>
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 text-left">
             Committed to empowering farmers globally, our all-in-one solution simplifies the Tech for All.
@@ -22,7 +22,7 @@ const Cards = () => {
           </p>
         </div>
         <div className="flex justify-center mt-auto">
-          <button className="bg-black text-white py-1 px-10 rounded-[50px] transition-colors">
+          <button className="bg-black text-white py-1 px-10 rounded-[50px] transition-all duration-300 ease-in-out transform hover:scale-105">
             Get Started
           </button>
         </div>
