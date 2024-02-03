@@ -6,11 +6,13 @@ import Contact from "@/components/NavBar/Services/Contact";
 import Transportation from "@/components/NavBar/Services/Transportation";
 import ComunityForum from "@/components/NavBar/ComunityForum/ComunityForum";
 import Home from "@/components/Home/Home";
-import About from "@/components/About/About";
+// import About from "@/components/About/About";
 import ProductTracking from "@/components/SupplyChain/ProductTracking";
 import UserInterface from "@/components/NavBar/ComunityForum/UserInterface";
 import Dashboard from "@/components/NavBar/ComunityForum/Dashboard";
-import ComunityForum2 from "@/components/NavBar/ComunityForum/ComunityForum2";
+// import ComunityForum2 from "@/components/NavBar/ComunityForum/ComunityForum2";
+import Docs from "@/components/Docs/Docs";
+import Transparency from "@/components/SupplyChain/Transparency";
 
 export const router = createBrowserRouter([
   {
@@ -25,8 +27,8 @@ export const router = createBrowserRouter([
       },
       // About
       {
-        path: "/about",
-        element: <Home />,
+        path: "/docs",
+        element: <Docs />,
       },
       //services routing
       {
@@ -48,6 +50,10 @@ export const router = createBrowserRouter([
           {
             path: "/transportaion/dashboard",
             element: <Dashboard />,
+          },
+          {
+            path: "/transportaion/transparency",
+            element: <Transparency />,
           },
         ]
       },
