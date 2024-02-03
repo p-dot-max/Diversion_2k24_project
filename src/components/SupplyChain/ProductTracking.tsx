@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card";
 // import { Separator } from "@/components/ui/separator";
 
-
 const ProductTracking = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">

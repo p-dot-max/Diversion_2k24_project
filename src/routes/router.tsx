@@ -10,6 +10,7 @@ import About from "@/components/About/About";
 import ProductTracking from "@/components/SupplyChain/ProductTracking";
 import UserInterface from "@/components/NavBar/ComunityForum/UserInterface";
 import Dashboard from "@/components/NavBar/ComunityForum/Dashboard";
+import ComunityForum2 from "@/components/NavBar/ComunityForum/ComunityForum2";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
       // About
       {
         path: "/about",
-        // element: <>,
+        element: <Home />,
       },
       //services routing
       {

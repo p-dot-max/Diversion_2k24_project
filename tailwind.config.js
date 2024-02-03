@@ -10,6 +10,10 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    borderRadius: {
+      'custom-sm': '50px',
+    },
+
     container: {
       center: true,
       padding: "2rem",
@@ -33,6 +37,7 @@ module.exports = {
 
       boxShadow: {
         'custom': '6px 6px 14.5px 0px rgba(0, 0, 0, 0.35)',
+        'custom-grad': '#74F2CE'
       },
 
       colors: {

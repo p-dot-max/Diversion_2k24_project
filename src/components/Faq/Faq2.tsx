@@ -4,7 +4,7 @@ const FaqItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`border-b border-gray-200 py-4 transition duration-500 ease-in-out ${isOpen ? "bg-gray-50" : "bg-white"}`}>
+    <div className={`border-b border-gray-200 py-4 px-10 transition duration-500 ease-in-out ${isOpen ? "bg-gray-50 shadow-md": "bg-white"}`}>
       <dt>
         <button
           onClick={() => setIsOpen(!isOpen)}
