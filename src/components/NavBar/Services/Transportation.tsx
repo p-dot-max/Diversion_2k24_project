@@ -40,7 +40,9 @@ const Transportation = () => {
               </p>
             </CardContent>
             <CardFooter>
+              <Link to='/transportaion/authentication'>
               <Button size="sm">Enter</Button>
+              </Link>
             </CardFooter>
           </Card>
           <Card>

@@ -13,6 +13,7 @@ import Dashboard from "@/components/NavBar/ComunityForum/Dashboard";
 // import ComunityForum2 from "@/components/NavBar/ComunityForum/ComunityForum2";
 import Docs from "@/components/Docs/Docs";
 import Transparency from "@/components/SupplyChain/Transparency";
+import Authentication from "@/components/SupplyChain/Authentication";
 
 export const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
           {
             path: "/transportaion/transparency",
             element: <Transparency />,
+          },
+          {
+            path: "/transportaion/authentication",
+            element: <Authentication />,
           },
         ]
       },

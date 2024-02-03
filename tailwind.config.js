@@ -10,9 +10,6 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    borderRadius: {
-      'custom-sm': '50px',
-    },
 
     container: {
       center: true,
@@ -25,10 +22,6 @@ module.exports = {
 
       height: {
         '374': '374px'
-      },
-
-      borderRadius: {
-        'custom': '7px',
       },
 
       backgroundColor: {
@@ -44,6 +37,7 @@ module.exports = {
         'custom-green': '#379634', // Added custom color
         'custom-text-green': '#507D2A',
         'custom-text-color': 'rgba(55, 150, 52, 0.19)'
+        
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'], // Added custom font
