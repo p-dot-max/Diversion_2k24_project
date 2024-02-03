@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 const ComunityForum = () => {
   return (
     <div className="bg-white min-h-screen dark:bg-gray-900">
-       <div className="flex">
+       <div className="flex flex-col md:flex-row">
         {/* need to make this aside responsive */}
         <aside className="w-80 bg-gray-200 p-6">
           <h2 className="text-2xl font-bold mb-4">Resources</h2>

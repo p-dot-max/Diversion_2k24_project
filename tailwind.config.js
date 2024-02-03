@@ -10,6 +10,13 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+<<<<<<< HEAD
+=======
+
+    // borderRadius: {
+    //   'custom-sm': '50px',
+    // },
+>>>>>>> aedd03cdbabd1c94688b0a5423c592d14a59806e
 
     container: {
       center: true,

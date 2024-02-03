@@ -9,7 +9,7 @@ function Home2() {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
             Revolutionizing Agriculture with Our{" "}
             <div className="mt-4">
-              <span className=" text-green-700">
+              <span className="text-green-700">
                 All-in-One AgriTech Ecosystem
               </span>
             </div>
@@ -20,10 +20,10 @@ function Home2() {
             the Future of Farming Today.
           </p>
           <div className="mt-8 flex flex-col md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4">
-            <button className="text-white bg-green-600 hover:bg-green-700 font-medium py-3 px-6 rounded-md">
+            <button className="text-white bg-green-600 hover:bg-green-700 font-medium py-3 px-6 rounded-[50px]">
               Get Started
             </button>
-            <button className="text-green-600 bg-transparent hover:bg-green-100 font-medium py-3 px-6 rounded-md">
+            <button className="text-green-600 bg-transparent hover:bg-green-100 drop-shadow-md font-medium py-3 px-6 rounded-md">
               See how it works
             </button>
           </div>

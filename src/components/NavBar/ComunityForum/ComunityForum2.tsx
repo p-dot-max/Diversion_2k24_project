@@ -16,7 +16,7 @@ const CommunityForum = () => {
             <ul className="space-y-2">
               <li>
                 <Link className="text-black hover:text-gray-700" to="#">
-                  Organic Farming Guide
+                  Farming Guide
                 </Link>
               </li>
               <li>
@@ -69,8 +69,8 @@ const CommunityForum = () => {
             <Input className="flex-1" placeholder="Search or create a post..." />
             <Button className="bg-blue-500 text-white">New Post</Button>
           </div>
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center space-x-4">
+          <div className="flex items-center mb-4">
+            <div className="">
               <Select>
                 <SelectTrigger id="sort-view">
                   <SelectValue placeholder="Sort & View" className="dark:text-white" />
@@ -90,7 +90,7 @@ const CommunityForum = () => {
                 <SelectValue placeholder="All Tags" />
               </SelectTrigger>
               <SelectContent position="popper">
-                <SelectItem value="all" className="w-20">All Tags</SelectItem>
+                <SelectItem value="all-tags">All Tags</SelectItem>
               </SelectContent>
             </Select>
           </div>
