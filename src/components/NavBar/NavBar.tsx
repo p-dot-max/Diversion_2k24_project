@@ -38,7 +38,7 @@ const NavBar = () => {
           
           {/* Nav item 2 */}
           <NavigationMenuItem>
-            <Link to={"/about"} className={cn("dark:text-white",navigationMenuTriggerStyle())}>
+            <Link to={"/docs"} className={cn("dark:text-white",navigationMenuTriggerStyle())}>
               Docs
             </Link>
           </NavigationMenuItem>
